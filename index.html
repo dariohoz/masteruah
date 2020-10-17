@@ -1,36 +1,27 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>Pagina Principal del Proyecto</title>
-</head>
-<body>
+---
+layout: default
+---
 
-<h1 style="text-align: center;">
-<strong>Bienvenidos al Repositorio del Proyecto</strong>
-</h1>
-<p>&nbsp;</p>
-<p style="text-align: center;">Autor: Dario De La Hoz</p>
-<p style="text-align: center;"><em>M&aacute;ster</em>&nbsp;en&nbsp;<em>Blockchain</em>,&nbsp;<em>Smart Contracts</em>&nbsp;y Criptoeconom&iacute;a</p><p>&nbsp;</p>
-<p><img style="display: block; margin-left: auto; margin-right: auto;" src="https://dlt4all.eu/wp-content/uploads/2020/03/blockchain-companies.jpg" alt="" width="357" height="226" />
-</p>
-      <h3>Para Forking: colocar el nombre dentro de las etiquetas li</h3>
-      
-      <li>Dario De La Hoz</li>
-      <li></li>
-      <li></li>
-      <li></li>
+<div class="blog-index">
+  {% assign index = true %}
+  {% for post in paginator.posts %}
+    {% assign content = post.content %}
+      <article>
+        {% include article.html %}
+      </article>
+  {% endfor %}
 
-</body>
-</html>
-© 2020 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
+  <div class="pagination">
+    <a href="/blog/archives">Blog Archives</a>
+    <a href="/blog/categories">Categories</a>
+
+    {% if paginator.previous_page %}
+      <a href="{{ paginator.previous_page_path }}" class="previous">Previous</a>
+    {% endif %}
+    <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+
+    {% if paginator.next_page %}
+      <a href="{{ paginator.next_page_path }}" class="next">Older</a>
+    {% endif %}
+  </div>
+</div>
