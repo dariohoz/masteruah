@@ -9,3 +9,10 @@ git remote add readme https://github.com/dariohoz/masteruah
 git remote -v
 git status -s
 
+# Tabla De Contactos
+## Master BlockChain
+### Autor: Darío De La Hoz
+| Nombre | Github |
+| ------ | ------ |
+| Lelaine Almeida | https://github.com/leilane13 |
+| Daniel Molina | https://github.com/dmolinac |
