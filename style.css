@@ -1,0 +1,53 @@
+﻿body {
+    margin: 0 auto;
+    padding: 1em;
+}
+h1, h2, h3, a {
+    color: #336699;
+}
+header img {
+    float: left;
+    margin-right: 1em;
+}
+nav {
+    float: right;
+}
+nav ul, footer ul {
+    list-style-type: none;
+}
+nav li {
+    display: inline-block;
+    margin-right: 1.5em;
+    font-size: 1.5em;
+    text-transform: uppercase;
+}
+section {
+    padding: 1em;
+    width: 70%;
+    float: left;
+    box-sizing: border-box;
+}
+aside {
+    background-color: #FFC0A2;
+    border: 0.1em solid #336699;
+    padding: 1em;
+    width: 30%;
+    float: right;
+    box-sizing: border-box;
+}
+aside img {
+    max-width: 100%;
+}
+footer:before {
+    content: "";
+    display: table;
+    clear: both;
+}
+footer {
+    width: 100%;
+    text-align: center;
+}
+footer li {
+    display: inline-block;
+    margin-right: 1.5em;
+}
